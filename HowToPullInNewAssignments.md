@@ -10,4 +10,4 @@ I will continue to post new assignments in this repo. In order to get those new 
 
   git push origin master
 
-Note: 
+Note: in order for this to work cleanly with as little pain to you as possible (such as dealing with merge conflicts), try not to ever modify the files I provide for the assignments. Pull them in so you have them for reference, but always create your own `solution.rb` files and check those in. As long as you don't modify any files I provide, you won't have conflicts.
