@@ -25,18 +25,18 @@ puts names.is_a? Array
 puts more_names.is_a? Array
 puts names_and_ages.is_a? Hash
 
-# Create a String literal and print it's class (one line)
+# Create a String literal and output it's class (one line)
 
-# Create a Fixnum literal and print it's class (one line)
+# Create a Fixnum literal and output it's class (one line)
 
-# Create an Array literal and print it's class (one line)
+# Create an Array literal and output it's class (one line)
 
-# Create a Hash literal and print it's class (one line). Note to keep from confusing Ruby you'll have to wrap what you are outputting in parenthesis
+# Create a Hash literal and output it's class (one line). Note to keep from confusing Ruby you'll have to wrap what you are outputting in parenthesis
 
-# Create a symbol and print it's class
+# Create a symbol and output it's class
 
 # Create a String constant with any name you choose
 
 # Change the value of that constant
 
-# Print the constant's value to the screen
+# Output the constant's value to the screen
