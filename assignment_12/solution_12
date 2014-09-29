@@ -11,27 +11,18 @@ questions =["What's your favorite color?", "What's your favorite genre?", "What'
 questions.each do
 
     puts "#{questions [0]}"
-
-        user_answer = $stdin.gets.chomp
-
-            puts "Press ENTER to END"
-
-               break if user_answer == "#{nil}"
+    user_answer = $stdin.gets.chomp
+    puts "Press ENTER to END"
+    break if user_answer == "#{nil}"
 
     puts "#{questions [1]}"
-
-       user_answer = $stdin.gets.chomp
-
-            puts "Press ENTER to END"
-
-                break if user_answer == "#{nil}"
+    user_answer = $stdin.gets.chomp
+    puts "Press ENTER to END"
+    break if user_answer == "#{nil}"
 
     puts "#{questions [2]}"
-
-       user_answer = $stdin.gets.chomp
-
-            puts "Press ENTER to END"
-
-              break if user_answer == "#{nil}"
+    user_answer = $stdin.gets.chomp
+    puts "Press ENTER to END
+    break if user_answer == "#{nil}"
 
     end
