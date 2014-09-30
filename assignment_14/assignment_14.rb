@@ -2,9 +2,14 @@
 # Note for this exercise, follow these simplified pig latin rules
 # If the first letter is a vowel, add "way" to the end
 # If the first letter is a consonant, move it to the end and add "ay"
+alpha = ('a'..'z').to_a
+starts_with_vowel = %w[a, e, i, o, u]
+consonants = (alpha - starts_with_vowel).join
+
 
 def pigatize(text)
-  if starts_with_vowel(text)
+  if starts_with_vowel.include(text[0])
+  if text[0..1] == "way"
   else
   end
   return pigatized_text
