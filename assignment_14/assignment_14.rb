@@ -5,12 +5,13 @@
 alpha = ('a'..'z').to_a
 starts_with_vowel = %w[a, e, i, o, u]
 consonants = (alpha - starts_with_vowel).join
-
+pigatized_text =
+pigatized =
 
 def pigatize(text)
   if starts_with_vowel.include(text[0])
-  if text[0..1] == "way"
-  else
+    text + "way"
+  elsif 
   end
   return pigatized_text
 end
