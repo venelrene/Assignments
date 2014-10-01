@@ -8,15 +8,13 @@
 questions = ["What's your favorite color?", "What's your favorite genre?", "What's your favorite letter?"]
 
 
+count_this = 0
 
-loop do
-
-  puts "#{questions}"
+  questions.each do |question|
+    puts "#{question}"
     user_answer = $stdin.gets.chomp
-  puts user_answer
-  puts "Press ENTER to END"
-
-
-break if user_answer.length == 0
+    count_this += 1
+    puts "Press ENTER to END"
+  break if user_answer.length == 0
 
 end
