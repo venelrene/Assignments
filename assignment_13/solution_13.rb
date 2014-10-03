@@ -6,8 +6,10 @@
 * Count the number of guesses and display at the end
 =end
 number = rand(1..10)
+i = 1
 
 loop do
+
   print "Guess the number I'm thinking of between 1-10?\n"
   user_guess = $stdin.gets.chomp.to_i
 
@@ -17,6 +19,8 @@ loop do
     puts "Your too LOW! guess again"
   else
     puts "Good Job! YOU WON"
+    puts i
     break
   end
+  i += 1
 end
