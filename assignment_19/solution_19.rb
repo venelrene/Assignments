@@ -13,27 +13,32 @@ require 'active_support/core_ext/time/zones'
 require 'active_support/core_ext/date_and_time/calculations'
 #1. Show the date of the beginning of the current week
 print "Date of the beginning  of the current week:"
-puts Date.beginning_of_week=(:monday)
-
+puts Date.current.beginning_of_week
 #2. Show what the date will be in 30 days
-print "In 30 days the Date will be:"
+print "In 30 days the Date will be:\n"
 puts Date.current + 30.days
 
 #3. Show what day of the week today's date will fall on next year
-print "Next year, today's date will be:"
-puts  Date.current + 1.years
+print "Next year, today's date will be:\n"
+puts  Date.current.years_since(1).strftime('%A')
 
 #4. Show what day of the week the user's birthday will be on this year (don't forget to ask for it!)
 print "When is your Birthday this year? (2014-MM-DD):\n"
   birthdate = Date.parse($stdin.gets.chomp)
   next_year = birthdate + 1.year
-puts "Next year your Birthday will be on #{next_year}!"
+  day_of_the_week = next_year.strftime('%A')
+puts "Next year your Birthday will be on #{day_of_the_week}!"
 
 #5. Using the String class, pluralize a singular word the user enters and show the singular for a plural word the user enters
 print "I can Pluralize what ever word you type, try me?\n"
   plural_word = $stdin.gets.chomp
   pluralize_word = plural_word.pluralize
 puts "The plural word you entered was: #{plural_word.capitalize}\nIt is now pluralized: #{pluralize_word.capitalize}!"
+
+print "I can singularize what ever word you type, try me?\n"
+  singular_word = $stdin.gets.chomp
+  singularize_word = singular_word.singularize
+puts "The singular word you entered was: #{singular_word.capitalize}\nIt is now singularize: #{singularize_word.capitalize}!"
 
 #6. Using the String class, truncate a phrase the user enters to 20 letters
 print "What is the hardest thing you had to accomplish?\n"
