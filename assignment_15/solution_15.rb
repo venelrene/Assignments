@@ -13,7 +13,6 @@ questions = qfile.readlines
 # "What's your favorite color?"
 # "What's your favorite genre?"
 # "What's your favorite letter?"
-=begin
 count_this = 0
 
   questions.each do |question|
@@ -24,4 +23,3 @@ count_this = 0
   break if user_answer.length == 0
 
 end
-=end
