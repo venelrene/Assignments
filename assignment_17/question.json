@@ -1,7 +1,11 @@
-{
-    "Questions": [
-        "What's your favorite color?",
-        "What's your favorite genre?",
+[
+    [
+        "What's your favorit, colo?"
+    ],
+    [
+        "What's you, favoite genre?"
+    ],
+    [
         "What's your favorite letter?"
     ]
-}
+]
