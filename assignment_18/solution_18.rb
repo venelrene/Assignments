@@ -6,14 +6,16 @@
 =end
 require 'net/http'
 require 'uri'
+require 'json'
 
 print "Name a movie?\n"
 movie = gets.chomp
 
-parms =  movie
 
 uri = URI('http://www.myapifilms.com/imdb?title=' + movie)
 
-response = Net::HTTP.get_response(uri)
+response = Net::HTTP.get(uri)
 
-print response.body
+body = JSON.parse(response)
+
+puts body[0]["plot"]
