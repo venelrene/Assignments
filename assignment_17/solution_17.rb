@@ -7,10 +7,10 @@
 
 require 'json'
 # Pulling the file as readable from a outside source "question.json" in a variable "json_file"
-file = File.read('question.json')
+file = File.read('assignment_17/question.json')
 #Taking taking the JSON file and parsing it into Questions
 questions = JSON.parse(file)
-# pulls questions and the value from it and save it under a new variable
+
 
 
 count_this = 0
