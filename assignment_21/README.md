@@ -14,7 +14,7 @@ Create a public instance method to get the user's age.
 
 Ask the user their name as one question, but store it separately in first and last name  variables.
 
-As you ask the user their information, create a User object.
+As you ask the user their information, create the Person object.
 
 After asking each user their information, output the user's age.
 
