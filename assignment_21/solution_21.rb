@@ -1,20 +1,19 @@
 # Assignment 21
-
 ## First
-
-Create a Person class with attributes: first name, last name, and birthdate.
-
-First name and last name should not be able to be written to, but should be readable.
-
-Birthdate can be set and read.
-
-Create a public instance method called 'name' that takes the name and sets the first name and last name instance variables.
-
+# Create a Person class with attributes: first name, last name, and birthdate.
+# First name and last name should not be able to be written to, but should be readable.
+# Birthdate can be set and read.
+class Person
+  attr_reader :first_name
+  attr_reader :last_name
+  attr_accessor :birthdate
+#Create a public instance method called 'name' that takes the name and sets the first name and last name instance variables.
+  def 
 Create a public instance method to get the user's age.
 
 Ask the user their name as one question, but store it separately in first and last name  variables.
 
-As you ask the user their information, create the Person object.
+As you ask the user their information, create a User object.
 
 After asking each user their information, output the user's age.
 

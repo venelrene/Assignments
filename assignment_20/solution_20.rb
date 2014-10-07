@@ -1,17 +1,21 @@
-#!/usr/bin/ruby
-# Note for this exercise, follow these simplified pig latin rules
-# If the first letter is a vowel, add "way" to the end
-# If the first letter is a consonant, move it to the end and add "ay"
+=begin
+Assignment 20
+
+Extend Ruby's String class to have a "pigatize" method that will turn any string into pig latin.
+
+* hardest part will be doing it for each word in the string
+* Hint: get it working with one word first, then for multiple words, consider what you already know for ways to break up a phrase by spaces, then look at the Array.collect method.
+=end
+
 alpha = ('a'..'z').to_a
 starts_with_vowel = %w[a, e, i, o, u]
 consonants = (alpha - starts_with_vowel).join
-pigatized_text =
-pigatized =
+
 
 def pigatize(text)
   if starts_with_vowel.include(text[0])
     text + "way"
-  elsif 
+  elsif
   end
   return pigatized_text
 end
