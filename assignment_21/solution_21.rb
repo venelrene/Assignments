@@ -3,6 +3,9 @@
 # Create a Person class with attributes: first name, last name, and birthdate.
 # First name and last name should not be able to be written to, but should be readable.
 # Birthdate can be set and read.
+require 'date'
+require 'active_support/all'
+
 class Person
   attr_reader :first_name, :last_name
   attr_accessor :birthdate
@@ -15,21 +18,25 @@ class Person
   end
 #Create a public instance method to get the user's age.
 
-  def age
-    puts "Enter age"
-    enter_age = gets.chomp.to_i
-  end
+  def age(birthdate)
+     diff = Date.today - birthdate
+     age = (diff / 365.25).floor
+   end
+
+
 end
 #Ask the user their name as one question, but store it separately in first and last name  variables.
   new_user = Person.new
   print "What is your first and last name?"
   entered_name = gets.chomp
 
+  print "Enter Birthdate (YYYY-MM-DD)"
+  birthdate = Date.parse($stdin.gets.chomp)
 #As you ask the user their information, create a User object.
 new_user.name(entered_name)
 
 #After asking each user their information, output the user's age.
-user_age = new_user.age
+user_age = new_user.age(birthdate)
 
 ## Next
 =begin  !!!!! I need HELP with this PART BELOW
