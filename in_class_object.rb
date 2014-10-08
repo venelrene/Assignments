@@ -1,16 +1,22 @@
 class Employee
-  @employee_name = nil
-  @employee_city = nil
+  attr_accessor :employee_name, :employee_city
 end
+
+
 
 class Company
-  @company_name = nil
-  @company_city = nil
-  @employees = []
-  @hire_employee(employee) = nil
-  @fire_employee(employee) = nil
+  attr_accessor :company_name, :company_city,
 end
 
+   def initialize
+     @employees = []
+   end
+
+   def hire_employee(employee)
+   @employees << employees
+   end
+
+   def fire_employee
 
     employee = employee.new
     hire_employee = employee.hire_employee(employee)
