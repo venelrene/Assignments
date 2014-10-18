@@ -6,11 +6,7 @@
 =end
 require 'date'
 require 'active_support/all'
-require 'active_support/duration'
-require 'active_support/core_ext/object/acts_like'
-require 'active_support/core_ext/date/zones'
-require 'active_support/core_ext/time/zones'
-require 'active_support/core_ext/date_and_time/calculations'
+
 #1. Show the date of the beginning of the current week
 print "Date of the beginning  of the current week:"
 puts Date.current.beginning_of_week
