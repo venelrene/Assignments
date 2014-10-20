@@ -1,5 +1,5 @@
 # Assignment 32
-* note, the issue for this assigment should still go in your Assignments repo. Please add a comment for the link to this repo and a link to see it running on Heroku.
+* note, the issue for this assignment should still go in your Assignments repo. Please add a comment for the link to this repo and a link to see it running on Heroku.
 * deploy the app with your movie query functionality out to Heroku
 * you will need to add a Procfile (included in this folder)
 * you will need to add the following to your Gemfile (please read the comments to remind yourself why each Gem is necessary):
