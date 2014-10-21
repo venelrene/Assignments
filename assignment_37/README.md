@@ -13,4 +13,4 @@
 3. Using a migration, add the employees start_date as a Date field
 4. Modify the show, index and form pages to allow entering the start_date and displaying it
 5. Place a PR with your committed changes.
-6. Add a comment in the PR with a link to your working Heroku app (with the changes deplo
+6. Add a comment in the PR with a link to your working Heroku app (with the changes deployed)
