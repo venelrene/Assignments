@@ -3,7 +3,10 @@
 * Clone it down
 * Deploy it to Heroku
 * Don't forget to migrate the db on Heroku
-* Now that it's working, make the following changes to the app:
+
+
+### Now that it's working, make the following changes to the app:
+
 
 1. Direct the user to the /employees page when they go to the root of the app
 2. Add bootstrap and bootstrap table styling: http://getbootstrap.com/css/#tables
