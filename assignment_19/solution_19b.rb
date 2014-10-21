@@ -12,15 +12,16 @@ class variable
 
 #3. Explain the difference between the three attr_ methods on lines 4, 5, and 6.
 line 4:Both read and write  line 5: you can only read  line 6: you can only write
+they all also create methods
 
 #4. On line 8, what is defined?
-initialize is being defined to add one everytime a new team_count is created
+initialize is being defined(an instance method is being define) to add one everytime a new team_count is created
 
 #5. What is the purpose of line 9?
 adding 1 to everytime the instance variable team_count is called
 
 #6. What type of method is defined on line 12?
-a self or top level method
+a self or top level method. defining a class method
 
 #7. On line 17, could single quotes be used instead of double quotes? Why?
 no because your single quotes doesnt allow you to embed variables.
@@ -42,12 +43,13 @@ In the following code, how many objects are created and what are their types?
 
     file = File.new('content.txt')
     content = file.read
-
+ 3, file, string, string literal
 
 12.
 
     file = File.read('content.txt')
 
+ 2, both string
 
 13.
 
@@ -55,7 +57,7 @@ In the following code, how many objects are created and what are their types?
     user.name = 'Me'
     user.city = 'St. Petersburg'
 
-3 objects using the class method new and read
+ 3 = two string and user
 
 14.In the following code, what type of variable (that is, what scope) is `count`?
 
@@ -71,8 +73,8 @@ In the following code, how many objects are created and what are their types?
     repeat
     puts count
 
-local variable
+ local variable
 
 15.In the code from #14, what will happen on the last line and why?
 It will end that define class
-puts will show the finle count
+puts will not show the finle count because counts ended in the local scope
