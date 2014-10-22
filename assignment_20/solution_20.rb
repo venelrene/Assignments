@@ -7,22 +7,31 @@ Extend Ruby's String class to have a "pigatize" method that will turn any string
 * Hint: get it working with one word first, then for multiple words, consider what you already know for ways to break up a phrase by spaces, then look at the Array.collect method.
 =end
 
-alpha = ('a'..'z').to_a
-starts_with_vowel = %w[a, e, i, o, u]
-consonants = (alpha - starts_with_vowel).join
+ALPHA = ('a'..'z').to_a
+VOWEL = %w[a e i o u]
+CONSONANTS = (ALPHA - VOWEL).join
+
 
 
 def pigatize(text)
-  if starts_with_vowel.include(text[0])
-    text + "way"
-  elsif
+  if starts_with_vowel(text)
+    pigatized_text = text + "way"
+  else
+    pigatized_text = text[1,text.size] + (text[0]) + "ay"
   end
   return pigatized_text
 end
 
 def starts_with_vowel(text)
-
-  return true
+  # puts VOWEL.inspect
+  # puts text[0]
+  if VOWEL.include? (text[0].downcase)
+    # puts "yes its a vowel"
+    return true
+  else
+    puts "no its a vowel"
+    return false
+  end
 end
 
 loop do
@@ -30,4 +39,7 @@ loop do
   text = gets.chomp
   break if text.length == 0
   puts pigatize(text)
+  puts "Press enter to exit"
+
+
 end
