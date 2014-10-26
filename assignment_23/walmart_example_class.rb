@@ -1,7 +1,10 @@
 #create an InvoiceItem object and add it to your Invoice object
 #Add the category to the InvoiceItem
+require 'active_support/all'
+
+
 class InvoiceItem
-  attr_accessor :name, :salePrice, :itemId, :availableOnline
+  attr_accessor :name, :salePrice, :itemId, :availableOnline, :quantity
 end
 
 class Invoice
@@ -9,12 +12,8 @@ class Invoice
 
   def total_item
     @items.reject {|item| item.quantity == 0}
-    invoice_total = @items.sum {|item|  item.sale_price * item.quantity}
+    invoice_total = @items.sum {|item|  item.salePrice * item.quantity}
 
-  end
-
-  def total
-    invoice_total = @items.sum {|item| item.sale_price * item.quantity * item.tax_percentage}
   end
 
   def initialize

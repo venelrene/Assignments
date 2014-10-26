@@ -21,7 +21,7 @@ invoice = Invoice.new
 invoice_item = InvoiceItem.new
 
 loop do
-  puts "What product would you like to search for?"
+  puts "Search for a product  (Press ENTER to Quit & see Invoice)"
   product_search = $stdin.gets.strip
   break if product_search.length == 0
 
@@ -33,26 +33,36 @@ loop do
   #call setter methods on item object for each attribute
   #add the item object to an array/collection of item objects
   items.each do |item|
-    puts "#{item["name"]}, #{item["saleprice"]}, #{item["itemId"]}, #{item["availableOnline"]}"
+    puts "#{item["name"]}, #{item["salePrice"]}, #{item["itemId"]}, #{item["availableOnline"]}"
   end
   # When the user searches for a product, allow the user to enter the product id (from the search results).
-  puts "From the list above narrow your search by product ID or Press ENTER to Quit"
+  puts "From the list above narrow your search by product ID "
   product_id = $stdin.gets.strip.to_i
   break if product_id == 0
   #select allows me look into the array item
   #narrow or select the itemID that is equal to product_id
   item_id = items.select {|item| item["itemId"] == product_id}
   item_id.each do |item|
-  puts "#{item["name"]}, #{item["saleprice"]}, #{item["itemId"]}, #{item["availableOnline"]}: has been added to your Invoice"
+    puts "#{item["name"]}, #{item["saleprice"]}, product ID:#{item["itemId"]}, #{item["availableOnline"]}"
+    # For the product indicated, create an InvoiceItem object and add it to your Invoice object
+    invoice_item.name = item["name"]
+    invoice_item.salePrice = item["salePrice"]
+    invoice_item.itemId = item["itemId"]
+    invoice_item.availableOnline = item["availableOnline"]
+
+    puts "How many #{item["name"]} do you want added to your invoice?"
+    invoice_item.quantity = $stdin.gets.strip.to_i
+    break if invoice_item.quantity == 0
+    invoice.items << invoice_item
+
+  end
 end
-  # For the product indicated, create an InvoiceItem object and add it to your Invoice object
-  invoice_item.name << item["name"]
-  invoice_item.salePrice << item["saleprice"]
-  invoice_item.itemId << item["itemId"]
-  invoice_item.availableOnline << item["availableOnline"]
-  invoice.items << invoice_item
+puts "Here is your Invoice"
+invoice.items.each do |item|
+  puts "#{item.name}, #{item.itemId}, #{item.salePrice}"
+
+  # When the user hits ENTER instead of a SEARCH term or a product id, print out the same result as in Assignment 22.
+  sub_total = invoice.total_item
+  puts "Sub Total: $#{sub_total}"
 
 end
-
-#
-#   puts ""
