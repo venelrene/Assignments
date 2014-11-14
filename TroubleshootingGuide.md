@@ -26,7 +26,7 @@ rake db:migrate
 Heroku:
 
 ````
-heroku run rake db:migrate:status
+heroku run rake db:migrate
 heroku restart
 ````
 
