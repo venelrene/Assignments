@@ -41,3 +41,5 @@ Thumbs.db
 # RubyMine #
 ############
 .idea/
+
+vendor/bundle
